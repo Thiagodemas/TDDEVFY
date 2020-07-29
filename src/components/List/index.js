@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import {MdAdd} from 'react-icons/md';
+import { MdAdd } from 'react-icons/md';
+
 import Card from '../Card';
 
-import {Container} from './styles';
+import { Container } from './styles';
 
-export default function List({ data }) {
+export default function List({ data, index: listIndex }) {
   return (
     <Container done={data.done}>
       <header>
@@ -18,14 +19,15 @@ export default function List({ data }) {
       </header>
 
       <ul>
-      { data.cards.map((card, index) => (
+        { data.cards.map((card, index) => (
           <Card 
             key={card.id} 
-           
+            // listIndex={listIndex}
+            // index={index} 
             data={card}
           />
         )) }
       </ul>
     </Container>
-  )
+  );
 }
