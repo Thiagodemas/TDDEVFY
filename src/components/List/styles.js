@@ -15,6 +15,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 42px;
+    opacity: ${props => props.done ? 0.6 : 1};
     h2 {
       font-weight: 500;
       font-size: 16px;
